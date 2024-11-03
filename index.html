@@ -130,9 +130,53 @@
 </div>
 <script>
     jQuery(document).ready(function(){
-        jQuery('.slick').slick({
-            arrows: false,
-        });
+        let hash = window.location.hash;
+
+        if (hash === '#800') {
+            jQuery('.slick').slick({
+                arrows: false,
+                initialSlide: 1,
+            });
+        } else if (hash === '#700') {
+            jQuery('.slick').slick({
+                arrows: false,
+                initialSlide: 2,
+            });
+        } else if (hash === '#600') {
+            jQuery('.slick').slick({
+                arrows: false,
+                initialSlide: 3,
+            });
+        } else if (hash === '#500') {
+            jQuery('.slick').slick({
+                arrows: false,
+                initialSlide: 4,
+            });
+        } else if (hash === '#400') {
+            jQuery('.slick').slick({
+                arrows: false,
+                initialSlide: 5,
+            });
+        } else if (hash === '#300') {
+            jQuery('.slick').slick({
+                arrows: false,
+                initialSlide: 6,
+            });
+        } else if (hash === '#200') {
+            jQuery('.slick').slick({
+                arrows: false,
+                initialSlide: 7,
+            });
+        } else if (hash === '#100') {
+            jQuery('.slick').slick({
+                arrows: false,
+                initialSlide: 8,
+            });
+        } else {
+            jQuery('.slick').slick({
+                arrows: false,
+            });
+        }
     });
 </script>
 </body>
