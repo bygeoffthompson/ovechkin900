@@ -18,10 +18,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <style>
-        body{background:#041e42;opacity:0;overflow-y:hidden;transition:background 3s ease-in,opacity 1s ease-in;}
+        body{background:#041e42;opacity:0;overflow-y:hidden;transition:all 2s ease-in;}
         body.reveal{background:#c8102e;opacity:1;}
         h1{font-family:'Rubik Wet Paint',system-ui;font-weight:400;font-style:normal;}
         #splash{background:url(img/ovi.png) 100% 100%/250px no-repeat #c8102e;}
+        #splash.nb-19{background:url(img/ovi-backstrom.png) 100% 100%/350px no-repeat #c8102e;}
         .btn-primary{background:#041e42!important;border:#041e42!important;}
         .goals{color:#efbf04;font-family:'Rubik Bubbles',sans-serif;font-weight:400;font-size:5rem;font-style:normal;}
         .slick{display:none;}
@@ -30,10 +31,12 @@
         .video-wrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%;}
         @media(min-width:768px){
             #splash{background-size:350px;}
+            #splash.nb-19{background-size:450px;}
         }
         @media(min-width:992px){
             h1{font-size:5rem;}
             #splash{background-size:33%;}
+            #splash.nb-19{background-size:50%;}
             .goals{font-size:8rem;}
         }
     </style>
@@ -52,8 +55,7 @@
     <div id="splash" style="height:100vh;overflow:hidden;">
         <div class="align-items-center d-flex flex-column h-100 justify-content-center p-3 text-light">
             <h1 class="mb-5 text-center text-lg-start text-light" title="Alex Ovechkin's Quest to 900 NHL Goals">
-                Ovechkin's Quest to<br>
-                900 NHL Goals
+                Ovechkin's 900 Goal Quest
             </h1>
             <p class="h5 mb-4 text-center">Based on a career average of .6 GPG Ovechkin is expected to tally his 900th NHL goal on</p>
             <p class="h3 mb-4">April 15, 2025</p>
@@ -148,7 +150,12 @@
     jQuery(document).ready(function(){
         let hash = window.location.hash;
 
-        if (hash === '#800') {
+        if (hash === '#19') {
+            jQuery('#splash').addClass('nb-19');
+            jQuery('.slick').slick({
+                arrows: false,
+            });
+        } else if (hash === '#800') {
             jQuery('.slick').slick({
                 arrows: false,
                 initialSlide: 1,
