@@ -16,10 +16,11 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <style>
         body{background:#c8102e;overflow-y:hidden;}
-        #embed{max-height:100vh;overflow-y:scroll;}
-        #splash{background:url(img/ovi.png) 100% 100%/400px no-repeat #c8102e;}
-        @media(min-width:992px){body{background-size:40%;}}
+        #splash{background:url(img/ovi.png) 100% 100%/250px no-repeat #c8102e;}
+        @media(min-width:768px){#splash{background-size:350px;}}
+        @media(min-width:992px){#splash{background-size:40%;}}
         .btn-primary{background:#041e42!important;border:#041e42!important;}
+        .slick-slide{height:100vh;}
         .video-wrapper{position:relative;padding-bottom:56.25%;height:0;width:100%;}
         .video-wrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%;}
     </style>
@@ -35,55 +36,96 @@
 </head>
 <body>
 <div class="slick">
-  <div id="splash" style="height:100vh;overflow:hidden;">
-    <div class="align-items-center d-flex flex-column h-100 justify-content-center p-3 text-light">
-      <h1 class="text-light" title="Alex Ovechkin's Quest to 900 NHL Goals">Alex Ovechkin's Quest to 900 NHL Goals</h1>
-      <p>Based on a career average of .6 GPG Ovechkin is expected to tally his 900th NHL goal on</p>
-      <p class="h3">April 15, 2025</p>
-      <p>in New York against the Islanders.</p>
-      <p><a class="btn btn-primary btn-lg fw-bold shadow" href="https://www.ticketmaster.com/new-york-islanders-vs-washington-capitals-belmont-park-new-york-04-15-2025/event/300060E1EE602958" target="_blank">Buy Tickets</a></p>
-    </div>
-  </div>
-  <div id="embed">
-    <div class="align-items-start d-flex flex-column gap-5 justify-content-center p-3 text-light">
-      <p class="h1 text-center w-100">#800</p>
-      <div class="video-wrapper">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/c5opGdr9wu8?si=4-LrxZCefKUoZwmh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-        <p class="h1 text-center w-100">#700</p>
-        <div class="video-wrapper">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/11eCWB1sJxg?si=yn9ta__ZIxkXY3j-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <p class="h1 text-center w-100">#600</p>
-        <div class="video-wrapper">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/sM2vVyx0oa8?si=LBz6UnSOuDA24i-J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <p class="h1 text-center w-100">#500</p>
-        <div class="video-wrapper">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/YxUVWBSPv_4?si=zMO6Mp4mXtTtDuk8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <p class="h1 text-center w-100">#400</p>
-        <div class="video-wrapper">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/tQOggNAEmp0?si=YOGGtYTpkjMM13B8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <p class="h1 text-center w-100">#300</p>
-        <div class="video-wrapper">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/5AkDUH0NrY4?si=Kl77GMk90w8dlRwW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <p class="h1 text-center w-100">#200</p>
-        <div class="video-wrapper">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/Nl-itBFgc58?si=AuRrgVZ71TdJZL4Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <p class="h1 text-center w-100">#100</p>
-        <div class="video-wrapper">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/uq4jyu4Y4OE?si=XYOILLysRIYuSkko" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-    </div>
-  </div>
-    <div style="height:100vh;">
+    <div id="splash" style="height:100vh;overflow:hidden;">
         <div class="align-items-center d-flex flex-column h-100 justify-content-center p-3 text-light">
-            <p class="h1 text">#700</p>
-
+            <h1 class="text-light" title="Alex Ovechkin's Quest to 900 NHL Goals">Alex Ovechkin's Quest to 900 NHL Goals</h1>
+            <p>Based on a career average of .6 GPG Ovechkin is expected to tally his 900th NHL goal on</p>
+            <p class="h3">April 15, 2025</p>
+            <p>in New York against the Islanders.</p>
+            <p><a class="btn btn-primary btn-lg fw-bold shadow" href="https://www.ticketmaster.com/new-york-islanders-vs-washington-capitals-belmont-park-new-york-04-15-2025/event/300060E1EE602958" target="_blank">Buy Tickets</a></p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+        </div>
+    </div>
+    <div>
+        <div class="align-items-center d-flex flex-column h-100 justify-content-center w-100">
+            <div class="w-100" style="max-width:80%;">
+                <p class="h1 text-center w-100">#800</p>
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/c5opGdr9wu8?si=4-LrxZCefKUoZwmh" title="Ovechkin's 800th Goal" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="align-items-center d-flex flex-column h-100 justify-content-center w-100">
+            <div class="w-100" style="max-width:80%;">
+                <p class="h1 text-center w-100">#700</p>
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/11eCWB1sJxg?si=yn9ta__ZIxkXY3j-" title="Ovechkin's 700th Goal" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="align-items-center d-flex flex-column h-100 justify-content-center w-100">
+            <div class="w-100" style="max-width:80%;">
+                <p class="h1 text-center w-100">#600</p>
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/sM2vVyx0oa8?si=LBz6UnSOuDA24i-J" title="Ovechkin's 600th Goal" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="align-items-center d-flex flex-column h-100 justify-content-center w-100">
+            <div class="w-100" style="max-width:80%;">
+                <p class="h1 text-center w-100">#500</p>
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/YxUVWBSPv_4?si=zMO6Mp4mXtTtDuk8" title="Ovechkin's 500th Goal" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="align-items-center d-flex flex-column h-100 justify-content-center w-100">
+            <div class="w-100" style="max-width:80%;">
+                <p class="h1 text-center w-100">#400</p>
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/tQOggNAEmp0?si=YOGGtYTpkjMM13B8" title="Ovechkin's 400th Goal" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="align-items-center d-flex flex-column h-100 justify-content-center w-100">
+            <div class="w-100" style="max-width:80%;">
+                <p class="h1 text-center w-100">#300</p>
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/5AkDUH0NrY4?si=Kl77GMk90w8dlRwW" title="Ovechkin's 300th Goal" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="align-items-center d-flex flex-column h-100 justify-content-center w-100">
+            <div class="w-100" style="max-width:80%;">
+                <p class="h1 text-center w-100">#200</p>
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Nl-itBFgc58?si=AuRrgVZ71TdJZL4Q" title="Ovechkin's 200th Goal" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="align-items-center d-flex flex-column h-100 justify-content-center w-100">
+            <div class="w-100" style="max-width:80%;">
+                <p class="h1 text-center w-100">#100</p>
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/uq4jyu4Y4OE?si=XYOILLysRIYuSkko" title="Ovechkin's 100th Goal" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
         </div>
     </div>
 </div>
