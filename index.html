@@ -20,9 +20,9 @@
     <style>
         body{background:#0b1f41;opacity:0;overflow-y:hidden;transition:all 2s ease-in;}
         body.reveal{background:#ce0e2d;opacity:1;}
-        h1{font-family:'Rubik Wet Paint',system-ui;font-weight:400;font-style:normal;}
-        #splash{background:url(img/ovi.png) 100% 100%/250px no-repeat #ce0e2d;}
-        #splash.nb-19{background:url(img/ovi-backstrom.png) 100% 100%/350px no-repeat #ce0e2d;}
+        h1,h2{font-family:'Rubik Wet Paint',system-ui;font-weight:400;font-style:normal;}
+        td{vertical-align:middle;}
+        .splash{background:#ce0e2d;height:100vh;overflow-y:scroll;}
         .btn-primary{background:#0b1f41!important;border:#0b1f41!important;}
         .goals{color:#ea871f;font-family:'Rubik Bubbles',sans-serif;font-weight:400;font-size:5rem;font-style:normal;}
         .slick{display:none;}
@@ -30,17 +30,23 @@
         .slick-dots{bottom:.5rem;display:flex;justify-content:center;left:0;list-style-type:none;margin:0;padding:0;position:absolute;width:100%;}
         .slick-dots button{background:#0b1f41;border:0;border-radius:50%;height:.75rem;margin-right:.5rem;overflow:hidden;padding:3px;text-indent:-9999vw;width:.75rem;}
         .slick-active button{background:#fff;}
+        .table{width:100%;}
         .video-wrapper{position:relative;padding-bottom:56.25%;height:0;width:100%;}
         .video-wrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%;}
+        @media(min-width:480px){
+            h1{font-size:5rem;}
+            .splash{background:url(img/ovi.png) 100% 100%/250px no-repeat #ce0e2d;}
+            .splash.nb-19{background:url(img/ovi-backstrom.png) 100% 100%/350px no-repeat #ce0e2d;}
+            .table{width:50%;}
+        }
         @media(min-width:768px){
-            #splash{background-size:350px;}
-            #splash.nb-19{background-size:450px;}
+            .splash{background-size:350px;}
+            .splash.nb-19{background-size:450px;}
         }
         @media(min-width:992px){
-            h1{font-size:5rem;}
-            #splash{background-size:33%;}
-            #splash.nb-19{background-size:50%;}
-            .goals{font-size:8rem;}
+            .splash{background-size:33%;}
+            .splash.nb-19{background-size:50%;}
+            .table{width:33%;}
         }
     </style>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-X10T1FECHS"></script>
@@ -55,15 +61,40 @@
 </head>
 <body>
 <div class="slick">
-    <div id="splash" style="height:100vh;overflow:hidden;">
-        <div class="align-items-center d-flex flex-column h-100 justify-content-center p-3 text-light">
-            <h1 class="mb-5 text-center text-light" title="Alex Ovechkin's Quest to 900 NHL Goals">
+    <div class="splash" style="height:100vh;overflow:hidden;">
+        <div class="align-items-center d-flex flex-column h-100 justify-content-start justify-content-md-center p-3 text-light">
+            <h1 class="mb-3 text-center text-light" title="Alex Ovechkin's Quest to 900 NHL Goals">
                 Ovechkin's 900 Goal Quest
             </h1>
-            <p class="h5 mb-4 text-center">Based on a career average of .6 GPG Ovechkin is expected to tally his 900th NHL goal on</p>
-            <p class="h3 mb-4">April 15, 2025</p>
-            <p class="h5 mb-4">in New York against the Islanders.</p>
-            <p><a class="btn btn-primary btn-lg fw-bold shadow" href="https://www.ticketmaster.com/new-york-islanders-vs-washington-capitals-belmont-park-new-york-04-15-2025/event/300060E1EE602958" target="_blank">Buy Tickets</a></p>
+            <p class="h5 mb-3 text-center">Ovechkin is expected to tally his 900th NHL goal on</p>
+            <p class="h3 mb-3">April 15, 2025</p>
+            <p class="h5 mb-5">against the Islanders.</p>
+            <h2 class="align-items-center d-flex gap-3 mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-ticket-perforated-fill" viewBox="0 0 16 16">
+                    <path d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5V6a.5.5 0 0 1-.5.5 1.5 1.5 0 0 0 0 3 .5.5 0 0 1 .5.5v1.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 11.5V10a.5.5 0 0 1 .5-.5 1.5 1.5 0 1 0 0-3A.5.5 0 0 1 0 6zm4-1v1h1v-1zm1 3v-1H4v1zm7 0v-1h-1v1zm-1-2h1v-1h-1zm-6 3H4v1h1zm7 1v-1h-1v1zm-7 1H4v1h1zm7 1v-1h-1v1zm-8 1v1h1v-1zm7 1h1v-1h-1z"/>
+                </svg>
+                Get Tickets
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-ticket-perforated-fill" viewBox="0 0 16 16">
+                    <path d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5V6a.5.5 0 0 1-.5.5 1.5 1.5 0 0 0 0 3 .5.5 0 0 1 .5.5v1.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 11.5V10a.5.5 0 0 1 .5-.5 1.5 1.5 0 1 0 0-3A.5.5 0 0 1 0 6zm4-1v1h1v-1zm1 3v-1H4v1zm7 0v-1h-1v1zm-1-2h1v-1h-1zm-6 3H4v1h1zm7 1v-1h-1v1zm-7 1H4v1h1zm7 1v-1h-1v1zm-8 1v1h1v-1zm7 1h1v-1h-1z"/>
+                </svg>
+            </h2>
+            <table class="border-light table table-bordered text-center text-light">
+                <tr>
+                    <td><i class="small">April 13, 2025 vs. CBJ</i></td>
+                    <td><strong>April 15, 2025 at NYI</strong></td>
+                    <td><i class="small">April 17, 2025 at PIT</i></td>
+                </tr>
+                <tr>
+                    <td><a class="btn btn-primary fw-bold shadow" href="https://www.ticketmaster.com/capitals-vs-blue-jackets-fan-appreciation-washington-district-of-columbia-04-13-2025/event/150060E2D4334E0B" target="_blank">Buy Tickets</a></td>
+                    <td><a class="btn btn-primary btn-lg fw-bold shadow" href="https://www.ticketmaster.com/new-york-islanders-vs-washington-capitals-belmont-park-new-york-04-15-2025/event/300060E1EE602958" target="_blank">Buy Tickets</a></td>
+                    <td><a class="btn btn-primary fw-bold shadow" href="https://www.ticketmaster.com/pittsburgh-penguins-vs-washington-capitals-pittsburgh-pennsylvania-04-17-2025/event/160060DAD99B5981" target="_blank">Buy Tickets</a></td>
+                </tr>
+            </table>
+
+
+            <p></p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
             <p>&nbsp;</p>
             <p>&nbsp;</p>
         </div>
@@ -164,7 +195,7 @@
         let hash = window.location.hash;
 
         if (hash === '#19') {
-            jQuery('#splash').addClass('nb-19');
+            jQuery('.splash').addClass('nb-19');
             jQuery('.slick').slick({
                 arrows: false,
                 dots: true,
